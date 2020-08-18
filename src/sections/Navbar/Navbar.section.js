@@ -47,7 +47,7 @@ const Navbar = () => {
             <a href="/programs" className="inline-block px-3 py-2 mx-6 text-gray-800 hover:text-teal-500" style={styles.a}>Programs</a>
             <a href="/contact" className="inline-block px-3 py-2 mx-6 text-gray-800 hover:text-teal-500" style={styles.a}>Contact</a>
             <a href="/donate"
-              className="inline-block px-3 py-2 mx-6 text-teal-100 font-medium bg-teal-400 rounded hover:text-teal-500 hover:bg-teal-300 transition ease-in duration-150"
+              className="inline-block px-3 py-2 mx-6 text-teal-100 font-medium bg-teal-400 rounded hover:text-teal-100 hover:bg-teal-300 transition ease-in duration-150"
               style={styles.a}>
               Donate</a>
           </div>
@@ -64,7 +64,7 @@ const styles = {
     position: 'fixed',
     top: 0,
     left: 0,
-    zIndex: 1,
+    zIndex: 1000,
     backgroundColor: '#fcfbfb',
   },
   a: {
