@@ -3,8 +3,17 @@ import { Carousel } from 'react-bootstrap';
 import img1 from '../../images/image1.jpg';
 import img2 from '../../images/image2.jpg';
 import img3 from '../../images/image3.jpg';
+import './home.scss';
 
 const Home = () => {
+  const [prayerTimes] = useState([
+    { type1: 'Dawn Prayer', type2: 'FARJ', time: '05:10AM' },
+    { type1: 'Midday Prayer', type2: 'ZUHR', time: '13:30PM' },
+    { type1: 'Afternoon Prayer', type2: 'ASR', time: '15:30PM' },
+    { type1: 'Sunset Prayer', type2: 'MAGRIB', time: '18:30PM' },
+    { type1: 'Evening Prayer', type2: 'ISHA', time: '19:30PM' },
+    { type1: 'Friday Prayer', type2: 'JUMUAH', time: '13:50PM' },
+  ])
   return (
     <div>
       <Carousels />
@@ -23,7 +32,7 @@ const Home = () => {
       </section>
 
       <section style={styles.sermons}>
-        <div className="shadow-sm w-3/4 m-5 p-5 rounded" >
+        <div className="shadow w-3/4 m-5 p-5 rounded" >
           <h3 className="underline text-teal-500 text-center">Friday prayer sermons</h3>
           <h6>date: 14/08/2020</h6>
           <div>
@@ -43,7 +52,25 @@ const Home = () => {
 
       <section className="bg-gray-100 p-5 flex">
         <div style={styles.showcase}>
-          <p>showcase images</p>
+          <div class="col-1-of-2">
+            <div class="composition">
+              <img
+                src={img1}
+                alt="showcase img 1"
+                className="composition__photo composition__photo--p1"
+              />
+              <img
+                src={img2}
+                alt="showcase img 1"
+                className="composition__photo composition__photo--p2"
+              />
+              <img
+                src={img3}
+                alt="showcase img 1"
+                className="composition__photo composition__photo--p3"
+              />
+            </div>
+          </div>
         </div>
         <div style={styles.about}>
           <h3 className="text-center text-teal-500">ABOUT THE BUEA ISLAMIC COMMUNITY</h3>
@@ -51,6 +78,31 @@ const Home = () => {
             Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
             Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu dicat falli consulatu at vis.
           </p>
+          <p className="text-center text-gray-800 mx-4">
+            Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+          </p>
+        </div>
+      </section>
+
+      <section className="relative" >
+        <div className="prayer" />
+
+        <div className="prayer-text">
+          <p className="text-center text-3xl underline">PRAYER TIMES</p>
+          <div className="flex">
+            {
+              prayerTimes.map((prayerTime, key) => {
+                return (
+                <div key={key} style={styles.prayerTimes}>
+              <p style={styles.prayerTimeTitle}>{prayerTime.type1}</p>
+                  <div>
+                    <p className="text-2xl">{prayerTime.type2}</p>
+                    <p className="bg-teal-400 mx-8 py-2 rounded ">{prayerTime.time}</p>
+                  </div>
+                </div>
+                ) })
+            }
+          </div>
         </div>
       </section>
     </div>
@@ -77,14 +129,33 @@ const styles = {
     textDecoration: 'none'
   },
   showcase: {
-    flex: 2,
+    flex: 2.5,
+    // margin: 'auto'
+    backgroundColor: 'red',
+    marginBottom: '25rem',
+    marginTop: '2rem',
   },
   about: {
-    flex: 4
+    flex: 4,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   sermons: {
     display: 'flex',
     justifyContent: 'center'
+  },
+  prayerTimes: {
+    backgroundColor: '#cccccc25',
+    padding: '0 0 .8rem 0',
+    borderRadius: '5px',
+    margin: '3rem 1rem'
+  },
+  prayerTimeTitle: {
+    backgroundColor: '#cccccc35',
+    padding: '1rem 3rem',
+    borderRadius: '5px 5px 0px 0px',
   }
 }
 const Carousels = () => {
