@@ -19,8 +19,8 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="bg-teal-400 py-2 px-20 flex justify-between items-center">
-        <div className="">
+      <div className="bg-teal-400 px-20 flex justify-between items-center">
+        <div className="mt-2">
           <p className="text-teal-100 text-2xl font-medium">Next big event:</p>
         </div>
 
@@ -30,8 +30,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div style={scrolled ? styles.fixed : null}>
-        <div className="flex justify-between items-center px-20 my-2 w-screen">
+      <div style={scrolled ? styles.fixed : null} className="shadow-md">
+        <div className="flex justify-between items-center px-20 py-2 w-screen">
           <a className="flex items-center" href="/" style={styles.a}>
             <img src="https://cdn4.iconfinder.com/data/icons/ramadhan-3/512/islam_moon_ramadhan_prayer-20-256.png"
               alt="logo" width="75" className="mr-5" />
