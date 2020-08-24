@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
+import { BiCalendarAlt, BiTimeFive, BiMap } from 'react-icons/bi';
+
 import img1 from '../../images/image1.jpg';
 import img2 from '../../images/image2.jpg';
 import img3 from '../../images/image3.jpg';
+import event from '../../images/event.jpg';
+import dimg1 from '../../images/dimage1.jpg';
+import dimg2 from '../../images/dimage2.jpg';
+import dimg3 from '../../images/dimage3.jpg';
 import './home.scss';
 
 const Home = () => {
@@ -109,14 +115,15 @@ const Home = () => {
 
       <section className="py-4">
         <div className="p-10">
-          <h4 className="text-center mt-5 mb-3 text-gray-900 font-medium text-3xl">PROGRAMS AND PROJECTS</h4>
+          <h2 className="text-center mt-5 mb-3 text-gray-900 font-bold text-3xl">PROGRAMS AND PROJECTS</h2>
           <p className="text-center text-xl mx-32">Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos</p>
         </div>
-        <div className="mx-20 my-3">
-          <div className="w-1/4 bg-gray-100 shadow-md rounded">
+
+        <div className="mx-20 my-3 flex">
+          <div className="w-1/4 bg-gray-100 shadow-md rounded mx-4">
             <img src={img1} alt="headerimg" className="w-full h-64 rounded-t " />
-            <div className="flex p-2">
-              <p>icn</p>
+            <div className="flex mt-2 ml-2 items-center">
+              <p><BiCalendarAlt className="text-xl text-teal-500"/></p>
               <p className="px-2 font-medium">20 AUG 2019</p>
             </div>
             <div className="m-auto py-4">
@@ -125,6 +132,100 @@ const Home = () => {
 
               <div className="flex justify-center items-center">
                 <a href="/programs" className="bg-teal-500 shadow-md rounded text-gray-100 text-lg font-medium py-2 px-3 hover:text-gray-300 hover:bg-red-500 transition ease-in duration-150" style={styles.a}>Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-1/4 bg-gray-100 shadow-md rounded mx-4">
+            <img src={img2} alt="headerimg" className="w-full h-64 rounded-t " />
+            <div className="flex mt-2 ml-2 items-center">
+              <p><BiCalendarAlt className="text-xl text-teal-500"/></p>
+              <p className="px-2 font-medium">20 AUG 2019</p>
+            </div>
+            <div className="m-auto py-4">
+              <h5 className="text-center">FUND RAISER</h5>
+              <p className="text-center">Lorem ipsum dolor sit amet et delectus accommodare his consul.read more</p>
+
+              <div className="flex justify-center items-center">
+                <a href="/programs" className="bg-teal-500 shadow-md rounded text-gray-100 text-lg font-medium py-2 px-3 hover:text-gray-300 hover:bg-red-500 transition ease-in duration-150" style={styles.a}>Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-1/4 bg-gray-100 shadow-md rounded mx-4">
+            <img src={img3} alt="headerimg" className="w-full h-64 rounded-t " />
+            <div className="flex mt-2 ml-2 items-center">
+              <p><BiCalendarAlt className="text-xl text-teal-500"/></p>
+              <p className="px-2 font-medium">20 AUG 2019</p>
+            </div>
+            <div className="m-auto py-4">
+              <h5 className="text-center">GRAVE YARD CLEANUP</h5>
+              <p className="text-center">Lorem ipsum dolor sit amet et delectus accommodare his consul.read more</p>
+
+              <div className="flex justify-center items-center">
+                <a href="/programs" className="bg-teal-500 shadow-md rounded text-gray-100 text-lg font-medium py-2 px-3 hover:text-gray-300 hover:bg-red-500 transition ease-in duration-150" style={styles.a}>Details</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section className="mt-8 bg-gray-100 py-4">
+        <div>
+          <div className="p-10">
+            <h2 className="text-center mt-5 mb-3 text-gray-900 font-bold text-3xl">UPCOMING EVENTS</h2>
+            <p className="text-center text-xl mx-32 text-gray-600">Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos</p>
+          </div>
+        </div>
+
+        <div className="flex p-10">
+          <div className="w-2/4 bg-white flex mx-4 shadow-md">
+            <div className="flex-1 my-10 mx-4">
+              <p className="px-2 font-medium ">20 AUG 2019</p>
+              <h4 className="px-2 my-4">Learn Arabic Language</h4>
+              <ul className="px-2">
+                <li className="my-1 text-gray-600 flex"><p><BiTimeFive className="text-xl mr-1 text-teal-500"/></p>10:00 AM TO 12:00 PM</li>
+                <li className="my-1 text-gray-600 flex"><p><BiMap className="text-xl mr-1 text-teal-500"/></p>BUEA MOSQUE</li>
+              </ul>
+              <p className="px-2">Lorem ipsum dolor sit amet et delectus accommodare his consul, ipsum dolor sit amet et delectus accommodare.</p>
+              <div className="flex justify-left mx-2 items-center">
+                <a href="/programs" className="bg-teal-500 shadow-md rounded text-gray-100 text-lg font-medium py-2 px-3 hover:text-gray-300 hover:bg-red-500 transition ease-in duration-150" style={styles.a}>JOIN US</a>
+              </div>
+            </div>
+
+            <div className="flex-1 block">
+              <img src={event} alt="evenimg" />
+              <ul className="flex m-0">
+                <li className="mr-1 py-2 px-3 bg-dark text-gray-100 text-center"><span className="font-bold text-2xl">02</span><p>Days</p></li>
+                <li className="mr-1 py-2 px-2 bg-dark text-gray-100 text-center"><span className="font-bold text-2xl">01</span><p>Hourse</p></li>
+                <li className="mr-1 py-2 px-2 bg-dark text-gray-100 text-center"><span className="font-bold text-2xl">40</span><p>Minutes</p></li>
+                <li className="py-2 px-2 bg-dark text-gray-100 text-center"><span className="font-bold text-2xl">29</span><p>Seconds</p></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="w-2/4 bg-white flex mx-4 shadow-md">
+            <div className="flex-1">
+              <img src={event} alt="evenimg" className="" />
+              <ul className="flex m-0">
+                <li className="mr-1 py-2 px-3 bg-dark text-gray-100 text-center"><span className="font-bold text-2xl">02</span><p>Days</p></li>
+                <li className="mr-1 py-2 px-2 bg-dark text-gray-100 text-center"><span className="font-bold text-2xl">01</span><p>Hourse</p></li>
+                <li className="mr-1 py-2 px-2 bg-dark text-gray-100 text-center"><span className="font-bold text-2xl">40</span><p>Minutes</p></li>
+                <li className="py-2 px-2 bg-dark text-gray-100 text-center"><span className="font-bold text-2xl">29</span><p>Seconds</p></li>
+              </ul>
+            </div>
+
+            <div className="flex-1 my-10 mx-4">
+              <p className="px-2 font-medium ">20 AUG 2019</p>
+              <h4 className="px-2 my-4">Learn Arabic Language</h4>
+              <ul className="px-2">
+                <li className="my-1 text-gray-600 flex"><p><BiTimeFive className="text-xl mr-1 text-teal-500"/></p>10:00 AM TO 12:00 PM</li>
+                <li className="my-1 text-gray-600 flex"><p><BiMap className="text-xl mr-1 text-teal-500"/></p>BUEA MOSQUE</li>
+              </ul>
+              <p className="px-2">Lorem ipsum dolor sit amet et delectus accommodare his consul, ipsum dolor sit amet et delectus.</p>
+              <div className="flex justify-left mx-2 items-center">
+                <a href="/programs" className="bg-teal-500 shadow-md rounded text-gray-100 text-lg font-medium py-2 px-3 hover:text-gray-300 hover:bg-red-500 transition ease-in duration-150" style={styles.a}>JOIN US</a>
               </div>
             </div>
           </div>
@@ -187,17 +288,17 @@ const styles = {
 const Carousels = () => {
   const [carouselInfos] = useState([
     {
-      img: img1,
+      img: dimg1,
       heading: 'ALLAH HELP THOSE WHO HELP THEMSELVES',
       subHeading: '',
     },
     {
-      img: img2,
+      img: dimg2,
       heading: 'ALLAH HELP THOSE WHO HELP THEMSELVES',
       subHeading: '',
     },
     {
-      img: img3,
+      img: dimg3,
       heading: 'ALLAH HELP THOSE WHO HELP THEMSELVES',
       subHeading: '',
     },

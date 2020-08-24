@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.style.css';
+import { FaFacebookSquare, FaGooglePlusSquare, FaTwitterSquare } from 'react-icons/fa';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -25,8 +26,14 @@ const Navbar = () => {
         </div>
 
         <div>
-          <a href="facebook" className="inline-block p-2 text-teal-200 hover:text-teal-100" style={styles.a}>facebook</a>
-          <a href="google" className="inline-block p-2 mr-6 text-teal-200 hover:text-teal-100" style={styles.a}>google</a>
+          <a href="facebook" className="inline-block py-2 px-2 text-teal-200 hover:text-teal-100" style={styles.a}>
+            <FaFacebookSquare className="text-xl" /></a>
+          <a href="google" className="inline-block py-2 px-2 text-teal-200 hover:text-teal-100" style={styles.a}>
+            <FaTwitterSquare className="text-xl" />
+          </a>
+          <a href="google" className="inline-block py-2 pl-2 mr-2 text-teal-200 hover:text-teal-100" style={styles.a}>
+            <FaGooglePlusSquare className="text-xl" />
+          </a>
         </div>
       </div>
 
