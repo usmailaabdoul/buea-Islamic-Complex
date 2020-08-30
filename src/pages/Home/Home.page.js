@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import { BiCalendarAlt, BiTimeFive, BiMap } from 'react-icons/bi';
+import { FaMosque } from 'react-icons/fa';
+import { GiBookCover, GiBookmarklet, GiPayMoney, GiBookmark, GiNewspaper } from 'react-icons/gi';
 
 import img1 from '../../images/image1.jpg';
 import img2 from '../../images/image2.jpg';
@@ -9,6 +11,8 @@ import event from '../../images/event.jpg';
 import dimg1 from '../../images/dimage1.jpg';
 import dimg2 from '../../images/dimage2.jpg';
 import dimg3 from '../../images/dimage3.jpg';
+import service from '../../images/services.png';
+
 import './home.scss';
 
 const Home = () => {
@@ -123,7 +127,7 @@ const Home = () => {
           <div className="w-1/4 bg-gray-100 shadow-md rounded mx-4">
             <img src={img1} alt="headerimg" className="w-full h-64 rounded-t " />
             <div className="flex mt-2 ml-2 items-center">
-              <p><BiCalendarAlt className="text-xl text-teal-500"/></p>
+              <p><BiCalendarAlt className="text-xl text-teal-500" /></p>
               <p className="px-2 font-medium">20 AUG 2019</p>
             </div>
             <div className="m-auto py-4">
@@ -139,7 +143,7 @@ const Home = () => {
           <div className="w-1/4 bg-gray-100 shadow-md rounded mx-4">
             <img src={img2} alt="headerimg" className="w-full h-64 rounded-t " />
             <div className="flex mt-2 ml-2 items-center">
-              <p><BiCalendarAlt className="text-xl text-teal-500"/></p>
+              <p><BiCalendarAlt className="text-xl text-teal-500" /></p>
               <p className="px-2 font-medium">20 AUG 2019</p>
             </div>
             <div className="m-auto py-4">
@@ -155,7 +159,7 @@ const Home = () => {
           <div className="w-1/4 bg-gray-100 shadow-md rounded mx-4">
             <img src={img3} alt="headerimg" className="w-full h-64 rounded-t " />
             <div className="flex mt-2 ml-2 items-center">
-              <p><BiCalendarAlt className="text-xl text-teal-500"/></p>
+              <p><BiCalendarAlt className="text-xl text-teal-500" /></p>
               <p className="px-2 font-medium">20 AUG 2019</p>
             </div>
             <div className="m-auto py-4">
@@ -171,7 +175,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mt-8 bg-gray-100 py-4">
+      <section className="mt-8 bg-gray-100 pb-32 ">
         <div>
           <div className="p-10">
             <h2 className="text-center mt-5 mb-3 text-gray-900 font-bold text-3xl">UPCOMING EVENTS</h2>
@@ -185,12 +189,12 @@ const Home = () => {
               <p className="px-2 font-medium ">20 AUG 2019</p>
               <h4 className="px-2 my-4">Learn Arabic Language</h4>
               <ul className="px-2">
-                <li className="my-1 text-gray-600 flex"><p><BiTimeFive className="text-xl mr-1 text-teal-500"/></p>10:00 AM TO 12:00 PM</li>
-                <li className="my-1 text-gray-600 flex"><p><BiMap className="text-xl mr-1 text-teal-500"/></p>BUEA MOSQUE</li>
+                <li className="my-1 text-gray-600 flex"><p><BiTimeFive className="text-xl mr-1 text-teal-500" /></p>10:00 AM TO 12:00 PM</li>
+                <li className="my-1 text-gray-600 flex"><p><BiMap className="text-xl mr-1 text-teal-500" /></p>BUEA MOSQUE</li>
               </ul>
               <p className="px-2">Lorem ipsum dolor sit amet et delectus accommodare his consul, ipsum dolor sit amet et delectus accommodare.</p>
               <div className="flex justify-left mx-2 items-center">
-                <a href="/programs" className="bg-teal-500 shadow-md rounded text-gray-100 text-lg font-medium py-2 px-3 hover:text-gray-300 hover:bg-red-500 transition ease-in duration-150" style={styles.a}>JOIN US</a>
+                <a href="/programs" className="bg-teal-500 shadow-md rounded text-teal-100 text-lg font-medium py-2 px-3 hover:text-teal-100 hover:bg-red-500 transition ease-in duration-150" style={styles.a}>JOIN US</a>
               </div>
             </div>
 
@@ -220,14 +224,92 @@ const Home = () => {
               <p className="px-2 font-medium ">20 AUG 2019</p>
               <h4 className="px-2 my-4">Learn Arabic Language</h4>
               <ul className="px-2">
-                <li className="my-1 text-gray-600 flex"><p><BiTimeFive className="text-xl mr-1 text-teal-500"/></p>10:00 AM TO 12:00 PM</li>
-                <li className="my-1 text-gray-600 flex"><p><BiMap className="text-xl mr-1 text-teal-500"/></p>BUEA MOSQUE</li>
+                <li className="my-1 text-gray-600 flex"><p><BiTimeFive className="text-xl mr-1 text-teal-500" /></p>10:00 AM TO 12:00 PM</li>
+                <li className="my-1 text-gray-600 flex"><p><BiMap className="text-xl mr-1 text-teal-500" /></p>BUEA MOSQUE</li>
               </ul>
               <p className="px-2">Lorem ipsum dolor sit amet et delectus accommodare his consul, ipsum dolor sit amet et delectus.</p>
               <div className="flex justify-left mx-2 items-center">
-                <a href="/programs" className="bg-teal-500 shadow-md rounded text-gray-100 text-lg font-medium py-2 px-3 hover:text-gray-300 hover:bg-red-500 transition ease-in duration-150" style={styles.a}>JOIN US</a>
+                <a href="/programs" className="bg-teal-500 shadow-md rounded text-teal-100 text-lg font-medium py-2 px-3 hover:text-teal-300 hover:bg-red-500 transition ease-in duration-150" style={styles.a}>JOIN US</a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="my-10">
+        <div>
+          <div className="pt-10">
+            <h2 className="text-center mt-5 mb-3 text-gray-900 font-bold text-3xl">OUR SERVICES</h2>
+            <p className="text-center text-xl mx-32 text-gray-600">Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos</p>
+          </div>
+        </div>
+
+        <div className="flex mx-16">
+          <div className="service-left">
+            <ul className="px-2">
+              <div>
+                <li className="text-gray-800 flex justify-end items-center py-3">
+                  <h4>Parent Education</h4>
+                  <div className="bg-teal-500 ml-3 p-2 rounded-full hover:bg-red-500 transition ease-in duration-200">
+                    <GiBookmark className="text-3xl text-teal-100" />
+                  </div>
+                </li>
+                <p>ipsum dolor sit amet et delectus accommodare accommodare</p>
+              </div>
+              <div>
+                <li className="text-gray-800 flex justify-end items-center py-3">
+                  <h4>Find A Mosque</h4>
+                  <div className="bg-teal-500 ml-3 p-2 rounded-full hover:bg-red-500 transition ease-in duration-200">
+                    <FaMosque className="text-3xl text-teal-100" style={{padding: '4px'}}/>
+                  </div>
+                </li>
+                <p>ipsum dolor sit amet et delectus accommodare accommodare</p>
+              </div>
+              <div>
+                <li className="text-gray-800 flex justify-end items-center py-3">
+                  <h4>Children Education</h4>
+                  <div className="bg-teal-500 ml-3 p-2 rounded-full hover:bg-red-500 transition ease-in duration-200">
+                    <GiBookCover className="text-3xl text-teal-100" />
+                  </div>
+                </li>
+                <p>ipsum dolor sit amet et delectus accommodare accommodare</p>
+              </div>
+            </ul>
+          </div>
+
+          <div className="" style={{ flex: 1.5 }}>
+            <img src={service} alt="services"/>
+          </div>
+          <div className="service-right">
+            <ul className="px-2">
+              <div>
+                <li className="text-gray-800 flex justify-start items-center py-3">
+                  <div className="bg-teal-500 mr-3 p-2 rounded-full hover:bg-red-500 transition ease-in duration-200">
+                    <GiBookmarklet className="text-3xl text-teal-100 " />
+                  </div>
+                  <h4>Makaranta Education</h4>
+                </li>
+                <p>ipsum dolor sit amet et delectus accommodare accommodare</p>
+              </div>
+              <div>
+                <li className="text-gray-800 flex justify-start items-center py-3">
+                  <div className="bg-teal-500 mr-3 p-2 rounded-full hover:bg-red-500 transition ease-in duration-200">
+                    <GiPayMoney className="text-3xl text-teal-100 " />
+                  </div>
+                  <h4>Charity & Donation</h4>
+                </li>
+                <p>ipsum dolor sit amet et delectus accommodare accommodare</p>
+              </div>
+              <div>
+                <li className="text-gray-800 flex justify-start items-center py-3">
+                  <div className="bg-teal-500 mr-3 p-2 rounded-full hover:bg-red-500 transition ease-in duration-200">
+                    <GiNewspaper className="text-3xl text-teal-100" />
+                  </div>
+                  <h4>News & Events</h4>
+                </li>
+                <p>ipsum dolor sit amet et delectus accommodare accommodare</p>
+              </div>
+            </ul>
           </div>
         </div>
       </section>
