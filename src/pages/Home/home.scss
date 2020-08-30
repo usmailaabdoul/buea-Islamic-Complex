@@ -60,3 +60,40 @@ transform: scale(0.95); }
   // padding: 20px;
   text-align: center;
 }
+.service-left {
+  flex: 1.5;
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem;
+  margin-top: 7rem;
+  
+  div {
+      text-align: end;
+      h4 {
+        font-weight: 700;
+      }
+
+      p {
+        color: #aaaaaa;
+      }
+  }
+}
+
+.service-right {
+  flex: 1.5;
+  display: flex;
+  justify-content: flex-start;
+  margin: 2rem;
+  margin-top: 7rem;
+
+  div {
+    text-align: start;
+    h4 {
+      font-weight: 700;
+    }
+
+    p {
+      color: #aaaaaa;
+    }
+}
+}
